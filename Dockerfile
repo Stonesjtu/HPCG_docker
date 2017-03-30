@@ -13,6 +13,7 @@ RUN apt-get update && \
     
 RUN wget http://www.hpcg-benchmark.org/downloads/HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c.tgz && \
     tar xf HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c.tgz && \
+    rm HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c.tgz && \
     cd HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c && \
     cp hpcg.dat_128x128x128_60 hpcg.dat
 
