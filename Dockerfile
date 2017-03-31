@@ -17,4 +17,5 @@ RUN wget http://www.hpcg-benchmark.org/downloads/HPCG_cuda8_ompi165_gcc485_sm_35
     cd HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c && \
     cp hpcg.dat_128x128x128_60 hpcg.dat
 
-CMD cd HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c && mpirun -np 1 ./xhpcg_gcc_485_cuda8044_ompi165_sm_35_sm_50_sm_60
+WORKDIR /HPCG_cuda8_ompi165_gcc485_sm_35_sm_50_sm60_v1c
+CMD mpirun -np 1 ./xhpcg_gcc_485_cuda8044_ompi165_sm_35_sm_50_sm_60
